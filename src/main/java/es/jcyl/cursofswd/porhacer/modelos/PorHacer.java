@@ -1,11 +1,16 @@
 package es.jcyl.cursofswd.porhacer.modelos;
 
 import javax.persistence.*;
-import lombok.Data;
+
+import lombok.*;
 
 @Entity
 @Table(name="TD_PORHACER")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class PorHacer {
 
     @Id
@@ -16,6 +21,12 @@ public class PorHacer {
     private String texto;
     @Column(name="completado", nullable = false)
     private boolean completedo = false;
+
+    public PorHacer(String texto, boolean completedo) {
+        this.texto = texto;
+        this.completedo = completedo;
+    }
+
 
 }
 
