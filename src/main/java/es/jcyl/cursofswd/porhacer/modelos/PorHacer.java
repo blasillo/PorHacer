@@ -20,11 +20,11 @@ public class PorHacer {
     @Column(name="texto", length=1024, nullable = false)
     private String texto;
     @Column(name="completado", nullable = false)
-    private boolean completedo = false;
+    private boolean completado = false;
 
     public PorHacer(String texto, boolean completedo) {
         this.texto = texto;
-        this.completedo = completedo;
+        this.completado = completedo;
     }
 
 
